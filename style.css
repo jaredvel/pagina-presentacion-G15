@@ -1,0 +1,23 @@
+.holamundo {
+    font-size: 50px;
+    color: blue;
+}
+
+section.aboutme h1#hobbies :hover{
+    background-color: blue;
+}
+
+div.buttons button#btn1{
+    background-color:gold;
+    transition: background-color .5s;
+    }
+
+div.buttons button#btn1:hover{
+    background-color: blue;
+    }
+
+    div.buttons button#btn1  {
+        animation-duration: 3s;
+        animation-name: slidein;
+        animation-iteration-count: infinite;
+      }
