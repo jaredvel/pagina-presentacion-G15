@@ -1,0 +1,199 @@
+/*VARIABLES PARA EVITAR CAMBIAR COLORES REPETITIVOS*/
+:root{
+    --rojo: #e50914;
+    --fondo: #141414;
+}
+
+/*SELECTOR UNIVERSAL, SE PUEDE EVITAR CON NORMALIZE.CSS
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+body{
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*REUTILIZANDO CLASE CONTENEDOR YA QUE SE UTILIZARÁ*/
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 30px 0;
+}
+
+/*SOLO CONTENEDOR DENTRO DEL HEADER, REUTILIZANDO CÓDIGO*/
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-timing-function: ease-in;
+    transition: all o.5s;
+}
+
+header .lado_inicio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    width: 160px;
+    height: 74px;
+    margin-left: -15px;
+    /*font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;*/
+}
+
+header nav a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+header nav a:hover,header nav a.activo{
+    color: #aaa;
+    }
+
+/*.contenedor .avatar1 {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+}*/
+
+header .lado_usuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .lado_usuario button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+header .lado_usuario .avatar1{
+    width: 35px;
+    height: 35px;
+}
+
+
+
+/*.contenedor .btnbuscar {
+    display: flex;
+    
+    align-items: center;
+}
+
+.contenedor .btncampana {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+}
+*/
+
+/*PELÍCULA PRINCIPAL*/
+/*TRABAJAR CON EM YA QUE FUNCIONA MEJOR EN RESPONSIVE*/
+
+.pelicula_principal{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: url(../img/backdrop1.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+} 
+
+.pelicula_principal:hover{
+    /*min-height: 40.62em;*/
+    transition: 3.5s;
+    /*color: rgba(24, 22, 22, 1);*/
+    background: url(../img/halo-infinite.gif);  
+    background-position: center center;
+    background-size: cover;
+    transition-delay: .5s;
+    /*margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;*/
+}
+
+.pelicula_principal .contenedor{
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.pelicula_principal .titulo{
+    font-weight: 600px;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.pelicula_principal .descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.pelicula_principal .btn_pelicula_principal{
+    background: rgba(145, 117, 117, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em; /*15px arriba y 15px de izq y der*/
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.pelicula_principal .btn_pelicula_principal:hover{
+    background: rgba(145, 117, 117, 0.2);
+}
+
+.pelicula_principal .btn_pelicula_principal i{
+    margin-right: 1.25em;
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 800px){
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header .contenedor .lado_inicio{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .contenedor .lado_usuario{
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .pelicula_principal{
+        font-size: 14px;
+    }
+
+    .pelicula_principal .descripcion{
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/menuprincipal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/626186bc60.js" crossorigin="anonymous"></script>
+    <title>NETFLIX</title>
+    <link rel="icon" href="img/icono_netflix.png">
+
+</head>
+<body>
+   
+   <header>
+       <div class="contenedor">
+           <div class="lado_inicio">
+               <img class="logo" src="img/logo.png" alt="Bienvenido a Netflix">
+               <nav>
+                   <a href="#" class="activo">Inicio</a>
+                   <a href="#">Series</a>
+                   <a href="#">Películas</a>
+                   <a href="#">Novedades populares</a>
+                   <a href="#">Mi lista</a>
+               </nav>
+           </div>
+               <div class="lado_usuario">
+                   <button role="button" class="btnbuscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+                   
+                   <button role="button" class="btncampana"><i class="fa-solid fa-bell"></i></button>
+
+                   <a href="index.html"><img class="avatar1" src="img/avatar1.png" alt="avatar1"></a>
+               </div>
+       </div>
+   </header>
+   
+   <main>
+       <div class="pelicula_principal">
+           <div class="contenedor">
+               <h3 class="titulo">Halo: La serie</h3>
+               <p class="descripcion">
+                   Ambientada en el siglo 24, esta serie de acción en vivo basada en el videojuego 
+                   se centra en una guerra interestelar entre humanos y una raza alienígena conocida 
+                   como The Covenant.
+            </p>
+            <button role="button" class="btn_pelicula_principal"><i class="fa-solid fa-play"></i>Reproducir</button>
+            <button role="button" class="btn_pelicula_principal"><i class="fa-solid fa-circle-info"></i>Más información</button>
+           </div>
+       </div>
+
+       <!--CREAR DIV QUE TENGA TODO, CONTROLES, CARRUSEL, FLECHAS-->
+       <div class="contenedores contenedor">
+           <div class="contenedor_titulo_controles">
+               <h3>Agregados recientemente</h3>
+               <div class="indicadores">
+                   <button><i class="fa-solid fa-hyphen"></i></button>
+                   <button><i class="fa-solid fa-hyphen"></i></button>
+                   <button><i class="fa-solid fa-hyphen"></i></button>
+               </div>
+           </div>
+
+           <div class="contenedor_principal">
+               <button role="button" id="flecha_izq" class="flecha_izq"><i class="fa-solid fa-angle-left"></i></button>
+
+                <!--DELIMITAR DE DÓNDE A DÓNDE IRÁ EL CARRUSEL-->
+                <div class="contenedor_carrusel">
+                    <div class="carrusel">
+
+                        <div class="pelicula">
+                            <a href="#"><img src="img/1.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/2.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/3.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/4.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/5.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/6.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/7.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/8.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/9.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/10.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/11.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/12.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/13.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/14.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/15.png" alt="Descripción"></a>
+                        </div>
+                       
+                    </div>
+                </div>
+
+               <button role="button" id="flecha_der" class="flecha_der"><i class="fa-solid fa-angle-right"></i></button>
+           </div> 
+           
+           <!--****CARRUSEL 2****-->
+
+            <div class="contenedor_titulo_controles">
+                <h3>Continuar viendo contenido de Jared</h3>
+                <div class="indicadores">
+                    <button><i class="fa-solid fa-hyphen"></i></button>
+                    <button><i class="fa-solid fa-hyphen"></i></button>
+                    <button><i class="fa-solid fa-hyphen"></i></button>               
+                </div>
+            </div>
+
+            <div class="contenedor_principal">
+                <button role="button" id="flecha_izq" class="flecha_izq"><i class="fa-solid fa-angle-left"></i></button>
+
+                <!--DELIMITAR DE DÓNDE A DÓNDE IRÁ EL CARRUSEL-->
+                <div class="contenedor_carrusel">
+                    <div class="carrusel">
+
+                        <div class="pelicula">
+                            <a href="#"><img src="img/10.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/5.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/3.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/9.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/15.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/11.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/1.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/4.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/13.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/7.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/8.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/12.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/2.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/14.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/6.png" alt="Descripción"></a>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <button role="button" id="flecha_der" class="flecha_der"><i class="fa-solid fa-angle-right"></i></button>
+            </div> 
+
+
+            <!--****CARRUSEL 3****-->
+            
+            <div class="contenedor_titulo_controles">
+                <h3>Tendencias</h3>
+                <div class="indicadores">
+                    <button><i class="fa-solid fa-hyphen"></i></button>
+                    <button><i class="fa-solid fa-hyphen"></i></button>
+                    <button><i class="fa-solid fa-hyphen"></i></button>
+                </div>
+            </div>
+
+            <div class="contenedor_principal">
+                <button role="button" id="flecha_izq" class="flecha_izq"><i class="fa-solid fa-angle-left"></i></button>
+
+                <!--DELIMITAR DE DÓNDE A DÓNDE IRÁ EL CARRUSEL-->
+                <div class="contenedor_carrusel">
+                    <div class="carrusel">
+
+                        <div class="pelicula">
+                            <a href="#"><img src="img/15.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/14.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/13.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/12.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/11.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/10.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/9.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/8.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/7.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/6.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/5.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/4.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/3.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/2.png" alt="Descripción"></a>
+                        </div>
+                        <div class="pelicula">
+                            <a href="#"><img src="img/1.png" alt="Descripción"></a>
+                        </div>
+                    </div>
+                </div>
+
+            <button role="button" id="flecha_der" class="flecha_der"><i class="fa-solid fa-angle-right"></i></button>
+            </div> 
+
+
+
+
+         </div>
+   </main>
+
+       <script src="js/main.js"></script>
+</body>
+</html>

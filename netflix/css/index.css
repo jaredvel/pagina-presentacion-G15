@@ -1,0 +1,195 @@
+/*VARIABLES PARA EVITAR CAMBIAR COLORES REPETITIVOS*/
+:root{
+    --rojo: #e50914;
+    --fondo: #141414;
+}
+
+/*SELECTOR UNIVERSAL, SE PUEDE EVITAR CON NORMALIZE.CSS
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+body{
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*REUTILIZANDO CLASE CONTENEDOR YA QUE SE UTILIZARÁ*/
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 30px 0;
+}
+
+/*SOLO CONTENEDOR DENTRO DEL HEADER, REUTILIZANDO CÓDIGO*/
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-timing-function: ease-in;
+    transition: all o.5s;
+}
+
+header .lado_inicio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    width: 160px;
+    height: 74px;
+    margin-left: -15px;
+    /*font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;*/
+}
+
+.pagina_perfiles{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    z-index: 0;
+}
+
+.lista_perfiles_centro{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.lista_perfiles{
+    max-width: 80%;
+    background: #141414;
+}
+
+.lista_perfiles .qst_perfiles{
+    width: 100%;
+    color: #fff;    
+    font-size: 30px;
+    font-weight: unset;
+    margin: .67em 0;
+}
+
+.lista_perfiles .selecciona_perfil,
+.lista_perfiles .qst_perfiles{
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: .4s;
+    transition-timing-function: ease-out;
+}
+
+.lista_perfiles .selecciona_perfil{
+    list-style-type: disc;
+    margin: 2em;
+    padding: 0;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.pagina_perfiles .perfil{
+    max-width: 200px;
+    min-width: 84px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    text-align: center;
+}
+
+.pagina_perfiles li a{
+    text-decoration: none;
+}
+
+a .perfil_link{
+    cursor: pointer;
+    color: #fff;
+    background-color: transparent;
+}
+
+.lista_perfiles .icono_perfil{
+    position: relative;
+}
+
+/*UTILIZAR VW PARA AJUSTAR AL ANCHO DE VENTANA*/
+.pagina_perfiles .icono{
+    height: 10vw;
+    width: 10vw;
+    max-height: 200px;
+    max-width: 200px;
+    min-height: 84px;
+    min-width: 84px;
+    box-sizing: border-box;
+    position: relative;
+    text-decoration: none;
+    background-size: cover;
+    background-color: #333;
+    border-radius: 4px;
+    border: none;
+}
+
+.pagina_perfiles .nombre_perfil{
+    font-size: 16px;
+    line-height: 1.2em;
+    min-height: 1.8em;
+    color: grey;
+    display: block;
+    text-align: center;
+    margin: .6em 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.pagina_perfiles .perfil_link:hover span{
+    color: #e5e5e5;
+}
+
+.pagina_perfiles .icono_perfil:hover:after{ 
+    color: #e5e5e5;    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    border: 4px solid #e5e5e5;
+    transition: .5s;
+}
+
+/*.pagina_perfiles .icono_perfil:hover::after{
+    display: block;
+    border-radius: 4px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-color: #e5e5e5;
+}*/
+
+/*.pagina_perfiles li a:hover .icono_perfil::after{
+    border-radius: 10%;
+    border-color: #e5e5e5;
+    display: block;
+    border: .3em transparent;
+    position: absolute;
+}*/

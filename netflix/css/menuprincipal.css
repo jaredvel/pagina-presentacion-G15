@@ -1,0 +1,316 @@
+/*VARIABLES PARA EVITAR CAMBIAR COLORES REPETITIVOS*/
+:root{
+    --rojo: #e50914;
+    --fondo: #141414;
+}
+
+/*SELECTOR UNIVERSAL, SE PUEDE EVITAR CON NORMALIZE.CSS
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}*/
+
+body{
+    background: var(--fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*REUTILIZANDO CLASE CONTENEDOR YA QUE SE UTILIZARÁ*/
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 30px 0;
+}
+
+/*SOLO CONTENEDOR DENTRO DEL HEADER, REUTILIZANDO CÓDIGO*/
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-timing-function: ease-in;
+    transition: all o.5s;
+}
+
+header .lado_inicio{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    width: 160px;
+    height: 74px;
+    margin-left: -15px;
+    /*font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--rojo);
+    font-size: 40px;*/
+}
+
+header nav a{
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+header nav a:hover,header nav a.activo{
+    color: #aaa;
+    }
+
+/*.contenedor .avatar1 {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+}*/
+
+header .lado_usuario{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .lado_usuario button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+header .lado_usuario .avatar1{
+    width: 35px;
+    height: 35px;
+}
+
+
+
+/*.contenedor .btnbuscar {
+    display: flex;
+    
+    align-items: center;
+}
+
+.contenedor .btncampana {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+}
+*/
+
+/*PELÍCULA PRINCIPAL*/
+/*TRABAJAR CON EM YA QUE FUNCIONA MEJOR EN RESPONSIVE*/
+
+.pelicula_principal{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: url(../img/backdrop1.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;
+} 
+
+.pelicula_principal:hover{
+    /*min-height: 40.62em;*/
+    transition: 3.5s;
+    /*color: rgba(24, 22, 22, 1);*/
+    background: url(../img/halo-infinite.gif);  
+    background-position: center center;
+    background-size: cover;
+    transition-delay: .5s;
+    /*margin-bottom: 3.12em;
+    display: flex;
+    align-items: flex-end;*/
+}
+
+.pelicula_principal .contenedor{
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.pelicula_principal .titulo{
+    font-weight: 600px;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.pelicula_principal .descripcion{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 1.75em;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.pelicula_principal .btn_pelicula_principal{
+    background: rgba(145, 117, 117, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em; /*15px arriba y 15px de izq y der*/
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.pelicula_principal .btn_pelicula_principal:hover{
+    background: rgba(145, 117, 117, 0.2);
+}
+
+.pelicula_principal .btn_pelicula_principal i{
+    margin-right: 1.25em;
+}
+
+/*CONTENEDOR DEL TÍTULO Y CONTROLES*/
+.contenedor_titulo_controles{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+
+}
+
+.contenedor_titulo_controles h3{
+    color: #fff;
+    font-size: 30px;
+}
+
+
+.contenedor_titulo_controles .indicadores button{
+    background: grey;
+    height: 3px;
+    width: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 2px;
+}
+
+.contenedor_titulo_controles button:hover,
+.contenedor_titulo_controles button.activo{
+    background: rgb(218, 212, 212);
+}
+
+/*CONTENEDOR PRINCIPAL Y FLECHAS*/
+.contenedores{
+    margin-bottom: 70px;
+}
+
+.contenedores .contenedor_principal{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/*FLECHAS: CAMBIAR ESTILOS Y PONER DENTRO DE CARRUSEL*/
+.contenedores .contenedor_principal .flecha_izq,
+.contenedores .contenedor_principal .flecha_der{
+    position: absolute; /*POSICIONES PARA TODO EL CONTENEDOR*/
+    border: none;
+    background: rgba(0, 0, 0, .5);
+    font-size: 40px;
+    height: 50%;
+    top: calc(50% - 25%); /*Calculo del 50% del tamaño del contenedor menos el 25% del alto del btn*/
+    line-height: 50px;
+    width: 50px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 500; /*flecha arriba de los elementos*/
+    transition: .2s ease all;
+}
+
+.contenedores .contenedor_principal .flecha_izq:hover,
+.contenedores .contenedor_principal .flecha_der:hover{
+    background: rgba(0, 0, 0, .8);
+}
+
+.contenedores .contenedor_principal .flecha_izq{
+    left: 0;
+}
+
+.contenedores .contenedor_principal .flecha_der{
+    right: 0;
+}
+
+/*CARRUSEL*/
+.contenedor_principal .contenedor_carrusel{
+    width: 100%;
+    padding: 20px 0; /*20px arriba y abajo y 0 izq der*/
+    overflow: hidden; /*todo lo que salga del espacio, ocultarlo*/
+    scroll-behavior: smooth;/*comportamiento del scroll*/
+}
+
+.contenedor_principal .contenedor_carrusel .carrusel{
+     display: flex;
+     flex-wrap: nowrap;
+}
+
+.contenedor_principal .contenedor_carrusel .carrusel .pelicula{
+    min-width: 20%;
+    transition: .3s ease all;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .3);
+}
+
+.contenedor_principal .contenedor_carrusel .carrusel .pelicula:hover{
+    transform: scale(1.2);
+    transform-origin: center;
+
+}
+
+.contenedor_principal .contenedor_carrusel .carrusel .pelicula img{
+    width: 100%;
+    vertical-align: top;/*QUITAR MARGEN QUE AGREGAN LOS NAVEGADORES*/
+}
+
+/*MEDIA QUERIES*/
+@media screen and (max-width: 800px){
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header .contenedor .lado_inicio{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header .contenedor .lado_usuario{
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .pelicula_principal{
+        font-size: 14px;
+    }
+
+    .pelicula_principal .descripcion{
+        max-width: 100%;
+    }
+
+    .contenedor_principal .contenedor_carrusel{
+        overflow: visible;
+    }
+
+    .contenedor_principal .contenedor_carrusel .carrusel{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);/*3 COLUMNAS CON TAMAÑO DE 1 FRACCIÓN*/
+        gap: 20px;/*ESPACIADO ENTRE CADA ELEMENTO DE GRID*/
+    }
+
+    .contenedores .indicadores, 
+    .contenedores .flecha_izq, 
+    .contenedores .flecha_der{
+        display: none;
+    }
+}
+
+/*MIN 34:41 JS*/
