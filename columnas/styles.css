@@ -1,0 +1,25 @@
+/*.row{
+    height: 30px;
+}
+
+[class*=col]{
+    background-color: aqua;
+}
+
+.pad-alt{
+    height: 95px;
+    margin: 5px;
+    background-color: blue;
+}*/
+
+.row{
+    background-color: antiquewhite;
+    margin: 10px;
+    height: 100px;
+}
+
+.col{
+    background-color: aqua;
+    border: black solid;
+}
+
